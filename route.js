@@ -12,7 +12,7 @@ router.route('/get-api').get(function(req, res) {
 });
 
 router.route('/post-api').post(function(req, res) {
-	console.log(req);
+	console.log(req.body);
 	res.end();
 });
 
