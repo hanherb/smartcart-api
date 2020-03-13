@@ -12,8 +12,8 @@ router.route('/get-api').get(function(req, res) {
 });
 
 router.route('/post-api').post(function(req, res) {
-	console.log(req.body);
-	res.end(req.body);
+	console.log(req);
+	res.end();
 });
 
 module.exports = router;
