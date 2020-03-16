@@ -21,12 +21,12 @@ router.route('/post-api').post(function(req, res) {
 	var item = raw.match(/@A[ -~\t]+/);
 
 	var json = {
-		terminal: terminal,
-		table: table,
-		guest: guest,
-		server: server,
-		printed: printed,
-		item: item
+		terminal: terminal[0],
+		table: table[0],
+		guest: guest[0],
+		server: server[0],
+		printed: printed[0],
+		item: item[0]
 	}
 	console.log(json);
 	res.end();
