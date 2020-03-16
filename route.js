@@ -13,8 +13,22 @@ router.route('/get-api').get(function(req, res) {
 
 router.route('/post-api').post(function(req, res) {
 	var raw = req.body.data;
+	var terminal = raw.match(/Terminal#[ -~\t]+/);
 	var table = raw.match(/Table#[ -~\t]+/);
-	console.log(table);
+	var guest = raw.match(/Guests[ -~\t]+/);
+	var server = raw.match(/Server[ -~\t]+/);
+	var printed = raw.match(/Printed[ -~\t]+/);
+	var item = raw.match(/@A[ -~\t]+/);
+
+	var json = {
+		terminal: terminal,
+		table: table,
+		guest: guest,
+		server: server,
+		printed: printed,
+		item: item
+	}
+	console.log(json);
 	res.end();
 });
 
