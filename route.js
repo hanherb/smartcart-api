@@ -12,7 +12,9 @@ router.route('/get-api').get(function(req, res) {
 });
 
 router.route('/post-api').post(function(req, res) {
-	console.log(req.body.data);
+	var raw = req.body.data;
+	var table = raw.match(/Table#[ -~\t]+/);
+	console.log(table);
 	res.end();
 });
 
