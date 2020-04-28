@@ -30,7 +30,7 @@ router.route('/post-api').post(function(req, res) {
 	// }
 	// console.log(json);
 	console.log(raw);
-	res.end();
+	res.json(raw);
 });
 
 module.exports = router;
